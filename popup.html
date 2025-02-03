@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Kaydedici</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        h3 {
+            color: #333;
+            margin-top: 0;
+        }
+        .entries {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .entry {
+            margin: 5px 0;
+            padding: 5px;
+            background: #f5f5f5;
+            border-radius: 3px;
+        }
+        .buttons {
+            margin-top: 10px;
+            display: flex;
+            gap: 5px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            flex: 1;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        button.delete {
+            background: #f44336;
+        }
+        button.delete:hover {
+            background: #da190b;
+        }
+    </style>
+    <script src="popup.js"></script>
+</head>
+<body>
+    <h3>Kaydedilen Veriler</h3>
+    <div class="entries" id="entries"></div>
+    <div class="buttons">
+        <button id="downloadBtn">JSON İndir</button>
+        <button id="clearBtn" class="delete">Tümünü Sil</button>
+    </div>
+</body>
+</html>

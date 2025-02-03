@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "JSON Kaydedici",
+  "version": "1.0",
+  "description": "Metin seçip kaydetmek için basit bir eklenti",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "downloads"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
